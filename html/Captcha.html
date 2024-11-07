@@ -3,16 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
-    <title>Document</title>
+    
+    <title class="text-center">Captcha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="w-[100%] bg-gray-200">
+    <br>
+    <h1 class ="flex justify-center">Captcha</h1>
+    <br>
+    <hr>
 
-    <h1>Captcha</h1>
-    <form>
-        <input type="range" name="range" id="range">
+    <form id="divForm" >
 
+        <label for="name">Nombre :</label>
+        <input type="text" name="name" id="name" required><br>
+        <label for="mail">Correo :</label>
+        <input type="text" name="mail" id="mail" required><br>
+        <label for="check">No soy un robot, pero si una maquina</label>
+        <input type="checkbox" name="check" id="miCheckbox"></label><br>
+        <input type="button" class="bg-warningLight hover:bg-warning hover:text-white text-warning text-sm py-2.5 px-5 mr-2 mb-2 rounded-xl transition duration-300" name="enviar" id="boton" value="Enviar">
     </form>
+
+
+    <div id="divrangepadres" class="flex"> <!--contender principal -->
+
+        <form id="rangeForm" class="flex mt-10 space-x-44"> <!--formulario -->
+            <div id="divrange1" >
+                <label for="range1">Primer dígito</label>
+                <input type="range" name="range1" id="range1" min="0" max="9"> 
+            </div>
+            <div id="divrange2" >
+                <label for="range2">Segundo dígito</label>
+                <input type="range" name="range2" id="range2" min="0" max="9">
+            </div>
+            
+            <div id="divrange3" >
+                <label for="range3">Tercer dígito</label>
+                <input type="range" name="range3" id="range3" min="0" max="9">
+            </div>
+            <div id="divrange4" >
+                <label for="range4">Cuarto dígito</label>
+                <input type="range" name="range4" id="range4" min="0" max="9">
+            </div>
+            
+    
+        </form>
+    </div>
     
 
     <script src="/js/captcha.js"></script>
