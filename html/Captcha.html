@@ -4,51 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title class="text-center">Captcha</title>
+    <title>Captcha</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="w-[100%] bg-gray-200">
+<body class="w-[100%] pl-4 pr-4 bg-gray-800 text-yellow-200">
     <br>
-    <h1 class ="flex justify-center">Captcha</h1>
+    <h1 class ="flex justify-center font-bold text-6xl">Captcha</h1>
     <br>
     <hr>
 
-    <form id="divForm" >
+    <form id="divForm" class ="flex flex-col items-center text-center pt-10" >
 
-        <label for="name">Nombre :</label>
-        <input type="text" name="name" id="name" required><br>
-        <label for="mail">Correo :</label>
-        <input type="text" name="mail" id="mail" required><br>
-        <label for="check">No soy un robot, pero si una maquina</label>
-        <input type="checkbox" name="check" id="miCheckbox"></label><br>
-        <input type="button" class="bg-warningLight hover:bg-warning hover:text-white text-warning text-sm py-2.5 px-5 mr-2 mb-2 rounded-xl transition duration-300" name="enviar" id="boton" value="Enviar">
-    </form>
+        
+        <!-- formulario sexy -->
+<form id="form1" class="max-w-sm mx-auto">
+    <div class="mb-5">
+    <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre</label>
+    <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+    </div>
+    <div class="mb-5">
+    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+    <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="p.palotes@megustalalejía.com" required />
+    </div>
+    <div class="flex items-start mb-5">
+    <div class="flex items-center h-5">
+        <input id="myCheckbox" type="checkbox" value="" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800" required />
+    </div>
+    <label for="myCheckbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">No soy un robot, pero soy una máquina.</label>
+    </div>
+    <button type="submit" id="boton" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Enviar</button>
+</form>
+
+    <!-- este es el innerHTML -->
+<div id="captcha"  class="flex justify-center font-bold text-6xl "> > 
+
+</div>
 
 
-    <div id="divrangepadres" class="flex"> <!--contender principal -->
+    <!-- el de los input de rango -->
+<div id="divrangepadres" class="flex">
 
-        <form id="rangeForm" class="flex mt-10 space-x-44"> <!--formulario -->
-            <div id="divrange1" >
-                <label for="range1">Primer dígito</label>
-                <input type="range" name="range1" id="range1" min="0" max="9"> 
-            </div>
+    <form id="rangeForm" class="flex mt-10 space-x-44"> <!--formulario -->
+        <div id="divrange1" >
+            <label for="range1">Primer dígito</label>
+            <input type="range" name="range1" id="range1" min="0" max="9"> 
+        </div>
             <div id="divrange2" >
-                <label for="range2">Segundo dígito</label>
-                <input type="range" name="range2" id="range2" min="0" max="9">
+            <label for="range2">Segundo dígito</label>
+            <input type="range" name="range2" id="range2" min="0" max="9">
             </div>
             
             <div id="divrange3" >
-                <label for="range3">Tercer dígito</label>
-                <input type="range" name="range3" id="range3" min="0" max="9">
+            <label for="range3">Tercer dígito</label>
+            <input type="range" name="range3" id="range3" min="0" max="9">
             </div>
-            <div id="divrange4" >
-                <label for="range4">Cuarto dígito</label>
-                <input type="range" name="range4" id="range4" min="0" max="9">
-            </div>
-            
+        <div id="divrange4" >
+            <label for="range4">Cuarto dígito</label>
+            <input type="range" name="range4" id="range4" min="0" max="9">
+        </div>
+    </form>
+</div>
+
     
-        </form>
-    </div>
     
 
     <script src="/js/captcha.js"></script>
